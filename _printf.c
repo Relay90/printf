@@ -9,7 +9,7 @@ void print_buffer(char buffer[], int *buff_ind);
  */
 int _printf(const char *format, ...)
 {
-	int i, count1 = 0, count2 = 0
+	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
@@ -51,7 +51,6 @@ int _printf(const char *format, ...)
 
 	return (printed_chars);
 }
-
 /**
  * print_buffer - prints the contents of the buffer if it exist
  * @buffer: Array of chars
